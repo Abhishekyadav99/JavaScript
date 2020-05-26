@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Grade Calculator</title>
+	<script>
+		function dis(){
+			alert("enter the Price ");
+			var n1= parseInt(prompt("enter the Cost Price 100"));
+			var n2= parseInt(prompt("enter the Saling Price 80"));
+			var d=n1-n2;
+			var disc=(d*100)/n1;
+			document.write("Discount % : "+disc+"%"+" "+"Discount");
+			}
+	</script>
+<head/>
+<body>
+	<div id="div1">
+	<p id="p1"><b>Introduction :- </b></p><br/>
+	<p>This masks save you for corona behealthy stay fit good luck sir.</p>
+	<p id="p2"><b>Name :- </b></p><p>Av Creation</p>
+	<p id="p3"><b>Description :- </b></p><p>Av Creation</p>
+	<p id="p4"><b>Price :- </b></p>
+	<p id="p5"><b>Cost Price :- </b></p><p>100</p>
+	<p id="p6"><b>Salling Price :- </b></p><p>80</p>
+	</div>
+	<input type="button" value="Calculate_Discount" onclick="dis()">
+</body>
+</html>

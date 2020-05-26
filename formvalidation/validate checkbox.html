@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Form Validation Number</title>
+	<script>
+	function validate(){
+		var valid=false;
+
+		if(document.getElementById("JavaScript").checked){
+			valid=true;
+		}
+		else if(document.getElementById("C").checked){
+			valid=true;
+		}
+		else if(document.getElementById("Java").checked){
+			valid=true;
+		}
+		else if(document.getElementById("C++").checked){
+			valid=true;
+		}
+		if(valid){
+			alert("validate Sucessfull");
+		}else{
+		alert("Please Select atleast one technology");	
+		return false;
+		}
+	}
+	</script>
+<head/>
+<body>
+	<h3>Select Language </h3>
+	<form name="myform" action="registration.jsp" onSubmit="return validate()">
+	<input type="checkbox" id="JavaScript" value="JavaScript">JavaScript
+	<input type="checkbox" id="C++" value="C++">C++
+	<input type="checkbox" id="C" value="C">C
+	<input type="checkbox" id="Java" value="Java">Java
+	<input type="submit" value="submit"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Function  and onmouseover/ onmouseout</title>
+</head>
+<body>
+<script>
+function display(){
+	alert("don't open it press ok");
+}
+display();
+display();
+
+function eventmouse(x){
+	x.style.color = "red";
+	x.style.backgroundColor = "yellow";
+	x.innerHTML ="Abhishek Yadav";
+}
+
+function eventmouseout(y){
+	y.style.color = "yellow";
+	y.style.backgroundColor = "red";
+	y.innerHTML ="MOUSEOUT";
+}
+</script>
+
+
+<marquee onmouseover="stop()" onmouseout="start()">Abhishek Yadav</marquee>
+
+
+<marquee onmousedown="stop()" onmouseup="start()">Abhishek Yadav</marquee>
+
+<p onmouseup="eventmouse(this)" onmousedown="eventmouseout(this)">Abhishek Yadav</p>
+</body>
+
+</html>

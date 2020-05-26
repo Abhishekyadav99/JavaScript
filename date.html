@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Date</title>
+	<script>
+	function continuousDisplay(){
+		//setTimeout : once
+		setInterval(displaydate,1000);
+		// clear interval 
+	}
+
+
+
+	function displaydate(){
+	var d = new Date();
+	var x=d.toLocaleTimeString();
+/*
+	document.getElementById("dateinfo").innerHTML = d;
+
+	document.getElementById("dateinfo").innerHTML = x;
+
+	var xd=d.toLocaleDateString();
+	document.getElementById("dateinfo").innerHTML = xd;
+*/
+	var xd1=d.toLocaleString();
+	document.getElementById("dateinfo").innerHTML = xd1;
+	}
+	</script>
+<head/>
+<body onload="continuousDisplay()">
+	<p id="dateinfo"></p>
+</body>
+</html>

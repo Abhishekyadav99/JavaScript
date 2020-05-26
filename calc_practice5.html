@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Multiply two no.</title>
+	<script>
+	
+	</script>
+<head/>
+<body>
+	<script>
+	function cal(a){
+		var x=parseInt(document.calform.n1.value);
+		var y=parseInt(document.calform.n2.value);
+		var z=document.calform.result;
+		
+
+		if(a.value=="Add"){
+			z.value=x+y;
+		}else if(a.value=="Sub"){
+			z.value=x-y;
+		}else if(a.value=="Mult"){
+			z.value=x*y;
+		}else if(a.value=="Div"){
+			z.value=x/y;
+		}else{
+			z.value=x%y;
+		}
+	}
+	</script>
+
+	<form name="calform">
+	Number 1 :<input type="text" name="n1"/><br/>
+	Number 2 :<input type="text" name="n2"/><br/>
+	Result :<input type="text" name="result"/><br/>
+	<input type="button" name="Add" value="Add" onclick="cal(this)"/>
+	<input type="button" name="Sub" value="Sub" onclick="cal(this)"/>
+	<input type="button" name="Mult" value="Mult" onclick="cal(this)"/>
+	<input type="button" name="Div" value="Div" onclick="cal(this)"/>
+	<input type="button" name="Mod" value="Mod" onclick="cal(this)"/>
+
+	</form>
+</body>
+</html>

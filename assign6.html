@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>onkeyup onkeydown and onkeypress</title>
+	<script>
+//		onkeydown onkeyup and onkeypress
+
+	function onkeydown1(x){
+		x.style.color="red";
+		x.style.backgroundColor="blue";
+		
+	}
+	function onkeyup1(x){
+		x.style.color="green";
+		x.style.backgroundColor="gray";
+		
+	}
+	function onkeypress1(x){
+		x.style.color="black";
+		x.style.backgroundColor="yellow";
+	}
+	</script>
+<head/>
+<body>
+<input type="text" onkeydown="onkeydown1(this)" onkeyup="onkeyup1(this)" onkeypress="onkeypress1(this) "/>
+
+
+</body>
+</html>

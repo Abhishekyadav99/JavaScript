@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Product Details</title>
+    <script>
+    
+    function product(id,name,description,price)
+    {
+        // Object Creation and 2 Function Declaration because the functions declared here use this function's object within their definition
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.displayProductDetails = displayProductDetails;                            
+        this.calculateDisc = calculateDisc;
+    }
+
+    function calculateDisc(percentage)
+    {
+        return this.price - (this.price * (percentage/100))           // Here 'this.price' refers to the price passed on to the object in function product()
+                                                                      // But since calculateDisc is declared in function product() and it uses the 'price' variable the same value is EVEN used here.
+    }
+
+    function displayProductDetails()                                  // Final Output Displaying Function
+    {
+        document.write("Name: " + this.name + "<br/>");
+        document.write("Description: " + this.description + "<br/>");
+        document.write("Discounted Price: " + this.calculateDisc(50));       // 'percentage' paramater of calculateDisc() is passed from here
+    }
+
+    var product = new product(1,"IPhone","Its Awesome",1000);          // Creation of object and passing data to the object through function paramters
+    product.displayProductDetails();                                   // Calling the final Output Displaying Function
+
+    </script>
+</head>
+
+</html>

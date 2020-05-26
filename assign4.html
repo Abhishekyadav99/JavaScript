@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Grade Calculator</title>
+	<script>
+	
+	</script>
+<head/>
+<body>
+	<script>
+		
+		function grade(){
+			var x=parseInt(prompt("enter math marks "));
+			var n1= parseInt(prompt("enter physics marks "));
+			var n2= parseInt(prompt("enter chemistry marks "));
+			var avg=(x+n1+n2)/3;
+			if(avg>=90){
+				alert("Grade A");
+				document.write("Grade A <br/>");
+			}else if(avg>=70 && avg<90){
+				alert("Grade B");
+				document.write("Grade B <br/>");
+			}else{
+				alert("Grade C");
+				document.write("Grade C <br/>");
+			}
+		}
+		grade();
+	</script>
+</body>
+</html>

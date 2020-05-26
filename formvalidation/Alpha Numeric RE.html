@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Alpha Numeric Reguler Expression</title>
+	<script>
+	function validate(){
+		var exp = /^[A-Za-z0-9\s]{8-12}$/;
+		var Address=document.myform.address.value;
+		var result = exp.test(Address);
+		if(result){
+			alert("validate Sucessfull");
+		}else{
+			document.getElementById("err").innerHTML="Please enter alpha numeric values only";
+			document.myform.address.focus();
+			return false;
+		}
+		
+	}
+	</script>
+<head/>
+<body>
+	<h3>User Registration : </h3>
+	<form name="myform" action="registration.jsp" onSubmit="return validate()">
+	Address:<textarea name="address"></textarea>
+	<b id="err"></b><br/>
+	<input type="submit" value="register"/>
+	</form>
+</body>
+</html>

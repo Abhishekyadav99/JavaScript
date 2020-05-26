@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Form Validation Text Field</title>
+	<script>
+	function validate(){
+		var color = document.myform.color.value;
+		if(color==""){
+			alert("please Select a color");
+			document.myform.color.focus();
+			return false;
+		}else{
+			alert("validation is Sucessfull");
+			return true;
+		}
+	}
+	</script>
+<head/>
+<body>
+	<h3>Select a Color : </h3>
+	<form name="myform" action="registration.jsp" onSubmit="return validate()">
+	<select name="color">
+		<option value="">Select a Color</option>
+		<option value="blue">Blue</option>
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+	</select>
+	<input type="submit" value="register"/>
+	</form>
+</body>
+</html>

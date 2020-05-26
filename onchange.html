@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Event onchange / onchange website / onfocuse and onblur</title>
+	<script>
+	function on_change_event(x){
+		document.bgColor=x;
+	}
+
+//	 onchange website  
+
+	function on_change_website(x){
+		window.location=x;
+	}
+
+//		onchange background image
+	function bgimage(x){
+		document.body.style.background = "url('"+x+"')";
+	}
+
+//		onfocuse onblur
+	function onfocuse_1(x){
+		x.style.color="red";
+		x.style.backgroundColor="blue";
+	}
+
+	function onblur_1(x){
+		x.style.color="gray";
+		x.style.backgroundColor="lightgreen";	
+	}
+
+
+
+//		onkeydown onkeyup and onkeypress
+
+	function onkeydown1(x){
+		
+	}
+	function onkeyup1(x){
+		
+	}
+	function onkeypress1(x){
+		
+	}
+	</script>
+<head/>
+<body>
+<select onchange="on_change_event(this.value)">
+	<option value="">Select a color</option>
+	<option value="blue">Blue</option>
+	<option value="red">red</option>
+	<option value="green">green</option>
+	<option value="lightgreen">lightgreen</option>
+	<option value="black">black</option>
+	<option value="gray">gray</option>
+</select>
+
+
+<!-- onchange website  -->
+
+<br/>
+<select onchange="on_change_website(this.value)">
+	<option value="">Select a website</option>
+	<option value="http://www.google.com">Google</option>
+	<option value="https://wizardlearner.blogspot.com/">av site</option>
+</select>
+
+<!-- onchange background image  -->
+<br/>
+<select onchange="on_change_website(this.value)">
+	<option value="">Select a image</option>
+	<option value="img/moti.jpg">Swami_Vivekanand</option>
+	<option value="img/av.jpg">av</option>
+	<option value="img/kalam.jpeg">APJ_Abdul_Kalam</option>
+	<option value="img/sw.jpg">Swami_Vivekanand1</option>
+</select>
+
+
+
+<!--   onfocuse and onblur -->
+
+<input type="text" onfocus="onfocuse_1(this)" onblur="onblur_1(this)"/>
+
+
+<!--  onkeydown onkeyup and onkeypress-->
+
+</body>
+</html>

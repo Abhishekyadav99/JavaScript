@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Error Handling / throw</title>
+	<script>
+	try{
+		addTwoNumber();	
+	}catch(obj){
+		document.write(obj.message+"<br/>");
+	}
+	document.write("After the error");
+
+	// throw
+
+	function validateage(){
+		try{
+			var x = document.getElementById("age").value;
+			if(age=" "){
+				throw "Age can not be empty";
+			}
+			if(age<18){
+				throw "To young to vote";
+			}
+		}catch(obj){
+			document.getElementById("errorinfo").innerHTML = obj;
+		}finally{
+			document.getElementById("finallyinfo").innerHTML = "inside_finally";
+		}
+	}
+	</script>
+<head/>
+<body >
+	Age: <input type="text" id="age"/> 
+	<input type="button" onclick="validateage()" value="validate"/>
+	<p id="errorinfo"></p>
+	<p id="finallyinfo"></p>
+</body>
+</html>
